@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Cache-Control" content="private, no-cache, no-store, max-age=0, must-revalidate">
+        
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/global.css' %}">
+        <link rel="stylesheet" href="{% static 'css/SideArea.css' %}">
+        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="">
+
+        <!--image-->
+        <link rel="icon" href="/static/image/">
+        
+        <title>Vehicle Management</title>
+    </head>
+    <body>
+        <!--Main Container-->
+        <div class="trp">
+            
+            <!--SideArea-->
+            <div class="SideArea">
+                
+                <!--Logo-->
+                <div class="logoBox">
+                    <!--Logo 클릭시 차량관리 메인 화면으로 이동-->
+                    <a href="/vehicle_managㅍer/" class="logoLink">
+                        <img class="logoImage" src="{% static 'image/TRPlogo.png' %}" alt="TRP">
+                    </a>
+                </div>
+                
+                <!--SideMenu-->
+                <div class="SideMenu">
+                    <ul class="SideMenuNav">
+                        
+                        <!--profile-->
+                        <p>프로필</p>
+                        <div class="NavBox">
+                            <li class="navMenu">
+                                <img class="navMenuImg" src="{% static 'image/HRManagement.png' %}" alt="admin icon">
+                                <a class="navMenuBar" href="/admin_page">admin</a>
+                            </li>
+                        </div>
+                        <div class="NavBox">
+                            <li class="navMenu">
+                                <img class="navMenuImg" src="{% static 'image/HRManagement.png' %}" alt="사이트로 이동">
+                                <a class="navMenuBar" href="/Main_Site">사이트로 이동</a>
+                            </li>
+                        </div>
+
+                        <!--Menu-->
+                        <div class="SideSolid"><br/><br/></div>
+                        <p>메뉴</p>
+                        <div class="NavBox">
+                            <li class="navMenu">
+                                <img class="navMenuImg" src="{% static 'image/HRManagement.png' %}" alt="일정 아이콘">
+                                <a class="navMenuBar" href="/Schedule">일정</a>
+                            </li>
+                        </div>
+                        <div class="NavBox">
+                            <li class="navMenu">
+                                <img class="navMenuImg" src="{% static 'image/HRManagement.png' %}" alt="공지사항 아이콘">
+                                <a class="navMenuBar" href="/announcement">공지사항</a>
+                            </li>
+                        </div>
+                        <div class="NavBox">
+                            <li class="navMenu">
+                                <img class="navMenuImg" src="{% static 'image/HRManagement.png' %}/" alt="배차 시스템 아이콘">
+                                <a class="navMenuBar" href="/Transfortation_Management_System">배차 시스템</a>
+                            </li>
+                        </div>
+                        <div class="NavBox">
+                            <li class="navMenu">
+                                <img class="navMenuImg" src="{% static 'image/HRManagement.png' %}" alt="인사관리 아이콘">
+                                <a class="navMenuBar" href="/Human_Resources_Management">인사관리</a>
+                            </li>
+                        </div>
+                        <div class="NavBox">
+                            <li class="navMenu">
+                                <img class="navMenuImg" src="{% static 'image/HRManagement.png' %}" alt="매출관리 아이콘">
+                                <a class="navMenuBar" href="/Price_Management">매출관리</a>
+                            </li>
+                        </div>
+                        <div class="NavBox">
+                            <li class="navMenu">
+                                <img class="navMenuImg" src="{% static 'image/HRManagement.png' %}" alt="차량관리 아이콘">
+                                <a class="navMenuBar" href="/Vehicle_Management">차량관리</a>
+                            </li>
+                        </div>
+                        <div class="NavBox">
+                            <li class="navMenu">
+                                <img class="navMenuImg" src="{% static 'image/HRManagement.png' %}" alt="서류관리 아이콘">
+                                <a class="navMenuBar" href="/Document_Management">서류관리</a>
+                            </li>
+                        </div>
+
+                        <!--고객센터-->
+                        <div class="SideSolid"><br/><br/></div>
+                        <p class="customerCenter">고객센터</p>
+                        <div class="NavBox">
+                            <li class= "navMenu">
+                                <img class="navMenuImg" src="{% static 'image/HRManagement.png' %}" alt="메뉴얼 아이콘">
+                                <a class="navMenuBar" href="/Document_Management">메뉴얼</a>
+                            </li>
+                        </div>
+                        <div class="NavBox">
+                            <li class="navMenu">
+                                <img class="navMenuImg" src="{% static 'image/HRManagement.png' %}" alt="문의하기 아이콘">
+                                <a class="navMenuBar" href="/Document_Management">문의하기</a>
+                            </li>
+                        </div>
+                        
+                        <!--관리자 설정-->
+                        <div class="SideSolid"><br/><br/></div>
+                        <div class="NavBox">
+                            <li class="navMenu">
+                                <img class="navMenuImg" src="{% static 'image/HRManagement.png' %}" alt="관리자 설정 아이콘">
+                                <a class="navMenuBar" href="/Document_Management">관리자 설정</a>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+
+            
+            <!--HeaderArea: 차량관리-->
+            <div class="--HeaderArea">
+
+            </div>
+
+            <!--SearchArea-->
+            <div class="SearchArea">
+                
+            </div>
+
+            <!--SortArea-->
+            <div class="SortArea">
+
+            </div>
+
+            <!--TableArea-->
+            <div class="TableArea">
+
+            </div>
+        </div>
+        <!--Main Container Done-->
+
+        <!--Popup Container-->
+        <div>
+            
+            <!--add_vehicle_Button Area-->
+            <div>
+
+            </div>
+
+        </div>
+        <!--Popup Container done-->
+        <div>
+
+        </div>
+    </body>
+</html>
