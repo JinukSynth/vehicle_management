@@ -1,0 +1,34 @@
+* {
+    list-style: none;
+    text-decoration: none;
+}
+  
+html {
+    font-size: 62.5%;
+    font-family: "Noto Sans CJK KR";
+    overflow-x: hidden;
+}
+  
+input[type=date] {
+    font-family: "Noto Sans CJK KR";
+}
+  
+body {
+    margin: 0;
+    background-color: #F5F5F5;
+}
+ 
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/*trp*/
+.trp {
+    position: relative;
+    display: flex;
+    width: 100vw;
+    min-width: 102.4rem;
+    min-height: 100vh;
+    height: auto;
+}

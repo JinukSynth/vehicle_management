@@ -1,0 +1,28 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5.9rem;
+  padding: 0 3rem;
+  border-bottom: 0.1rem solid #CFCFCF;
+  background-color: white;
+}
+.headerTitle {
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: #191919;
+}
+.profile {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+  margin-right: 1.5rem;
+}
+.profile span {
+  font-size: 1.6rem;
+  color: #191919;
+}
+.userName {
+  font-weight: 700;
+  margin-right: 0.2rem;
+}

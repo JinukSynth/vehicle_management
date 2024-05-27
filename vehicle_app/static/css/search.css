@@ -1,0 +1,68 @@
+.search-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 6.6rem;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+  border-radius: 0.2rem;
+  box-shadow: 0rem 0.1rem 0.4rem rgb(0 0 0 / 30%);
+  background-color: white;
+  box-sizing: border-box;
+}
+.search-form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+}
+.search-form-label {
+  font-size: 1.4rem;
+  margin-right: 2rem;
+}
+.search-form input[type=month] {
+  width: 12rem;
+  margin-right: 2rem;
+}
+.search-form-input {
+  width: 18rem;
+  height: 2.6rem;
+  padding-left: 1rem;
+  box-sizing: border-box;
+  border: 0.1rem solid #D2D2D2;
+  border-radius: 0.2rem;
+  outline: none;
+  font-family: "Noto Sans CJK KR";
+  font-size: 1.4rem;
+}
+.search-form-search-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.6rem;
+  margin-left: 2rem;
+  padding: 0 1.8rem;
+  border: none;
+  border-radius: 0.2rem;
+  font-size: 1.4rem;
+  color: white;
+  background-color: #444444;
+  cursor: pointer;
+}
+.search-vehicle-num {
+  width: 37.2rem;
+  height: 4.2rem;
+}
+.search-form input[type=date],
+.search-vehicle-num,
+.search-form-input {
+  height: 2.6rem;
+  padding-left: 1rem;
+  box-sizing: border-box;
+  border: 0.1rem solid #D2D2D2;
+  border-radius: 0.2rem;
+  outline: none;
+  font-family: "Noto Sans CJK KR";
+  font-size: 1.4rem;
+}
