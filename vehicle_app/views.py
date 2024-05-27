@@ -7,7 +7,7 @@ from vehicle_app.models import Vehicle
 from .forms import VehicleSearchForm
 from .forms import VehicleAddForm
 from .forms import VehicleDeleteForm
-#from .forms import VehicleUpdateForm
+from .forms import VehicleUpdateForm
 
 # MainPage_vehicle.html(urls.py : local/vehicles/)
 def Vehicle_Management(request): # All data get from models.py 
@@ -82,15 +82,16 @@ def vehicle_delete(request):
     return render(request, 'MainPage_vehicle.html', {'form': form})
 
 
-# # Vehicle Detail Information Update
-# def vehicle_update(request):
-#     if request.method == 'POST':
-#         form = VehicleUpdateForm(request.POST)
-#         if form.is_vaild():
-#             form.save()
-#             return JsonResponse({'message': 'Vehicle Updeate successfully'}, status = 200)
-#         else: 
-#             return JsonResponse({'error': form.error}, status = 400) # failure error message
-#     else: # Get request
-#         form = VehicleUpdateForm()
-#     return render(request,'MainPage_vehicle.html', {'form':form}) # form rendering
+# Vehicle Detail Information Update
+def vehicle_update(request, pk):
+    vehicle = get_object_or_404(Vehicle, pk = pk) # vehicle = pk, pk를 가진 객체가 없다면 404오류
+    if request.method == 'POST':
+        form = VehicleUpdateForm(request.POST)
+        if form.is_vaild():
+            form.save()
+            return JsonResponse({'message': 'Vehicle Updeate successfully'}, status = 200)
+        else: 
+            return JsonResponse({'error': form.error}, status = 400) # failure error message
+    else: # Get request
+        form = VehicleUpdateForm()
+    return render(request,'MainPage_vehicle.html', {'form': form, 'vehicle' : vehicle}) # form rendering

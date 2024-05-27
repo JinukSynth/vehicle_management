@@ -1,788 +1,537 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-    {% load static %}
+    
     <link rel="stylesheet" href="{% static 'css/global.css' %}">
     <link rel="stylesheet" href="{% static 'css/header.css' %}">
-    <link rel="stylesheet" href="{% static 'css/main-container.css'%} ">
-    <link rel="stylesheet" href="{% static 'css/popup.css'%} ">
-    <link rel="stylesheet" href="{% static 'css/search.css'%} ">
-    <link rel="stylesheet" href="{% static 'css/sidemenu.css'%} ">
+    <link rel="stylesheet" href="{% static 'css/mainContainer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/search.css' %}">
+    <link rel="stylesheet" href="{% static 'css/sidemenu.css' %}">
+    <link rel="stylesheet" href= "{% static 'css/MainPage_Vehicle.css' %}">
+    
     <title>DEV</title>
   </head>
-  
+
   <body>
     <div class="trp">
-    
-    <!--팝업-->
-    <div id="popup" class="popup">
-      <div class="popup-content">
-        <!-- 팝업 내용 (차량내용) -->
-        <div class="popup-title">
-          차량관리 &nbsp;<span>차량등록</span>
-          <hr>
-        </div>
-        <div class="popup-section">
-          <div class="popup-article-box">
-            <div class="popup-article-double vehicle-num">
-              <label for class="popup-article-label">차량번호</label>
-              <div class="vehicle-num-box">
-                  <input type="text" value="vehicleNum" placeholder="경기00아" class="popup-article-input-twice">
-                  <input type="text" value="vehicleNum" placeholder="0000" class="popup-article-input-twice">
-              </div>
-            </div>
-            <div class="popup-article-double">
-              <label for class="popup-article-label">차량가격</label>
-              <input type="text" class="popup-article-input" placeholder="230,000,000">
-            </div>
-            <div class="popup-article-double popup-article-true-false">
-              <div class="popup-article-label">전광판 유무</div>
-              <div class="true-false">
-                <input type="radio" name="ledTrueFalse">있음
-                <input type="radio" name="ledTrueFalse">없음
-              </div>
-            </div>
+      
+      <div id="popup" class="popup">
+        <div class="popupContent">
+          <div class="popupTitle">
+            <span class="popupTitleTextFirst">차량관리 &nbsp;</span> <span class="popupTitleTextSecond">차량등록</span>
+            <hr>
           </div>
-          <div class="popup-article-box">
-            <div class="popup-article-double">
-              <label for class="popup-article-label">승차인원</label>
-              <input type="text" class="popup-article-input" placeholder="00">
-            </div>
-            <div class="popup-article-double">
-              <label for class="popup-article-label">번호판가격</label>
-              <input type="text" class="popup-article-input" placeholder="25,000,000">
-            </div>
-            <div class="popup-article-double popup-article-true-false">
-              <div class="popup-article-label">노래방 유무</div>
-              <div class="true-false">
-                <input type="radio" name="singTrueFalse">있음
-                <input type="radio" name="singTrueFalse">없음
-              </div>
-            </div>
-          </div>
-          <div class="popup-article-box">
-            <div class="popup-article-double">
-              <label for class="popup-article-label">출고일자(연도)</label>
-              <input type="text" class="popup-article-input" placeholder="00">
-            </div>
-            <div class="popup-article-double">
-              <label for class="popup-article-label">보험비</label>
-              <input type="text" class="popup-article-input" placeholder="25,000,000">
-            </div>
-            <div class="popup-article-double popup-article-true-false">
-              <div class="popup-article-label">온수기 유무</div>
-              <div class="true-false">
-                <input type="radio" name="hotTrueFalse">있음
-                <input type="radio" name="hotTrueFalse">없음
-              </div>
-            </div>
-          </div>
-          
-          <div class="popup-article-box">
-            <div class="popup-article-double">
-              <label for class="popup-article-label">차량이름</label>
-              <input type="text" class="popup-article-input" placeholder="00">
-            </div>
-            <div class="popup-article-double">
-              <label for class="popup-article-label">정비(월)</label>
-              <input type="text" class="popup-article-input" placeholder="25,000,000">
-            </div>
-            <div class="popup-article-double popup-article-true-false">
-              <div class="popup-article-label">냉장고 유무</div>
-              <div class="true-false">
-                <input type="radio" name="refrigeratorTrueFalse">있음
-                <input type="radio" name="refrigeratorTrueFalse">없음
-              </div>
-            </div>
-          </div>
-          <div class="popup-article-box">
-            <div class="popup-article-double">
-              <label for class="popup-article-label">제조사</label>
-              <input type="text" class="popup-article-input" placeholder="00">
-            </div>
-            <div class="popup-article-double">
-              <label for class="popup-article-label">튜닝(일)</label>
-              <input type="text" class="popup-article-input" placeholder="25,000,000">
-            </div>
-            <div class="popup-article-double popup-article-true-false">
-              <div class="popup-article-label">USB</div>
-              <div class="true-false">
-                <input type="radio" name="USBTrueFalse">있음
-                <input type="radio" name="USBTrueFalse">없음
-              </div>
-            </div>
-          </div>
-          <div class="popup-article-box">
-            <div class="popup-article-double">
-              <label for class="popup-article-label">형식</label>
-              <input type="text" class="popup-article-input" placeholder="00">
-            </div>
-            <div class="popup-article-double">
-              <label for class="popup-article-label">감가상각(월)</label>
-              <input type="text" class="popup-article-input" placeholder="25,000,000">
-            </div>
-            <div class="popup-article-double popup-article-true-false">
-              <div class="popup-article-label">TV</div>
-              <div class="true-false">
-                <input type="radio" name="tvTrueFalse">있음
-                <input type="radio" name="tvTrueFalse">없음
-              </div>
-            </div>
-          </div>
-          <div class="popup-article-box popup-article-box-two">
-            <div class="popup-article-double">
-              <label for class="popup-article-label">모델연도</label>
-              <input type="text" class="popup-article-input" placeholder="00">
-            </div>
-            <div class="popup-article-double popup-article-double-second">
-              <label for class="popup-article-label">감가기준년도</label>
-              <input type="text" class="popup-article-input" placeholder="25,000,000">
-            </div>
-          </div>
-          <div class="popup-article-box popup-article-box-two">
-            <div class="popup-article-double">
-              <label for class="popup-article-label">차대번호</label>
-              <input type="text" class="popup-article-input" placeholder="00">
-            </div>
-            <div class="popup-article-double popup-article-double-second">
-              <label for class="popup-article-label">할부</label>
-              <input type="text" class="popup-article-input" placeholder="25,000,000">
-            </div>
-          </div>
-          <div class="popup-article-box popup-article-box-one">
-            <div class="popup-article-double">
-              <label for class="popup-article-label">원동기형식</label>
-              <input type="text" class="popup-article-input" placeholder="00">
-            </div>
-          </div>
-          <div class="popup-article-box popup-article-box-one">
-            <div class="popup-article-double">
-              <label for class="popup-article-label">담당기사</label>
-              <input type="text" class="popup-article-input" placeholder="00">
-            </div>
-          </div>
-          <div class="popup-article-box popup-article-box-one">
-            <div class="popup-article-double">
-              <label for class="popup-article-label">정기점검일</label>
-              <input type="date" class="popup-article-input" placeholder="00">
-            </div>
-          </div>
-          <div class="popup-article-box popup-article-box-one">
-            <div class="popup-article-double">
-              <label for class="popup-article-label">사용방식</label>
-              <div class="true-false alone-true-false">
-                <div>
-                  <input type="radio" name="useTrueFalse">사용
-                </div>
-                <div>
-                <input type="radio" name="useTrueFalse">미사용
+          <div class="popupSection">
+            <div class="popupArticleBox">
+              <div class="popupArticleDouble vehicleNum">
+                <label for="vehicleNum" class="popupArticleLabel">차량번호</label>
+                <div class="vehicleNumBox">
+                    <input type="text" id="vehicleNum" placeholder="경기00아" class="popupArticleInputTwice">
+                    <input type="text" id="vehicleNum" placeholder="0000" class="popupArticleInputTwice">
                 </div>
               </div>
+              <div class="popupArticleDouble">
+                <label for="vehiclePrice" class="popupArticleLabel">차량가격</label>
+                <input type="text" id="vehiclePrice" class="popupArticleInput" placeholder="230,000,000">
               </div>
-          </div>
-          <div class="popup-article-box popup-article-box-one">
-              <div class="popup-article-double">
-              <label for class="popup-article-label">차량등록증</label>
-              <input type="text" class="popup-article-input" placeholder="00">
+              <div class="popupArticleDouble popupArticleTrueFalse">
+                <div class="popupArticleLabel">전광판 유무</div>
+                <div class="trueFalse">
+                  <input type="radio" name="ledTrueFalse" id="ledYes">있음
+                  <input type="radio" name="ledTrueFalse" id="ledNo">없음
+                </div>
               </div>
-          </div>
-          </div>
-          
-
-        </div>
-
-    <div class="close-create">
-      <button class="close" onclick="closePopup()">닫기</button>
-      <button class="create">등록</button>
-    </div>
-    </div>
-    <!--팝업 종료-->
-    
-    <!--사이드메뉴-->
-    <div class="side-menu">
-      <!--사이드메뉴 로고-->
-      <div class="logo-box">
-        <a href="/service" style="color: white; font-size: 5rem">
-          DEV
-        </a>
-      </div>
-      <!--사이드메뉴 내비게이션-->
-      <div class="side-menu-nav">
-        <ul class="side-menu-nav1">
-          <div class="nav1-box" style="background-color: rgb(28, 26, 78)">
-            <li class="nav1-box-menu">
-              <img
-                class="nav1-box-menu-img"
-                src="/static/images/calendar.png?v=0.1236"
-                alt="일정 아이콘"
-              />
-              <a href="/service" class="non-depth2-menu">일정</a>
-            </li>
-          </div>
-          <div class="nav1-box" style="background-color: rgb(28, 26, 78)">
-            <li class="nav1-box-menu nav1-box-menu-have-depth2">
-              <img
-                class="nav1-box-menu-img"
-                src="/static/images/notice.png?v=0.1236"
-                alt="공지사항 아이콘"
-              />
-              <div>공지사항</div>
-              <svg
-                class="side-menu-arrow"
-                xmlns="http://www.w3.org/2000/svg"
-                width="18.228"
-                height="11.84"
-                viewBox="0 0 18.228 11.84"
-              >
-                <path
-                  id="패스_256"
-                  data-name="패스 256"
-                  d="M0,0,6.753,8.223,14,0"
-                  transform="translate(2.111 2.117)"
-                  fill="none"
-                  stroke="#fff"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="3"
-                ></path>
-              </svg>
-            </li>
-            <div class="side-menu-nav2-box">
-              <ul class="side-menu-nav2">
-                <a href="/notice/driver" class="side-menu-nav2-link">
-                  <li class="side-menu-nav2-menu">기사님 공지사항</li>
-                </a>
-                <a href="/notice/office" class="side-menu-nav2-link">
-                  <li class="side-menu-nav2-menu">사무실 공지사항</li>
-                </a>
-              </ul>
+            </div>
+            <div class="popupArticleBox">
+              <div class="popupArticleDouble">
+                <label for="passengerNum" class="popupArticleLabel">승차인원</label>
+                <input type="text" id="passengerNum" class="popupArticleInput" placeholder="00">
+              </div>
+              <div class="popupArticleDouble">
+                <label for="platePrice" class="popupArticleLabel">번호판가격</label>
+                <input type="text" id="platePrice" class="popupArticleInput" placeholder="25,000,000">
+              </div>
+              <div class="popupArticleDouble popupArticleTrueFalse">
+                <div class="popupArticleLabel">노래방 유무</div>
+                <div class="trueFalse">
+                  <input type="radio" name="singTrueFalse" id="singYes">있음
+                  <input type="radio" name="singTrueFalse" id="singNo">없음
+                </div>
+              </div>
+            </div>
+            <div class="popupArticleBox">
+              <div class="popupArticleDouble">
+                <label for="releaseDate" class="popupArticleLabel">출고일자(연도)</label>
+                <input type="text" id="releaseDate" class="popupArticleInput" placeholder="00">
+              </div>
+              <div class="popupArticleDouble">
+                <label for="insuranceCost" class="popupArticleLabel">보험비</label>
+                <input type="text" id="insuranceCost" class="popupArticleInput" placeholder="25,000,000">
+              </div>
+              <div class="popupArticleDouble popupArticleTrueFalse">
+                <div class="popupArticleLabel">온수기 유무</div>
+                <div class="trueFalse">
+                  <input type="radio" name="hotTrueFalse" id="hotYes">있음
+                  <input type="radio" name="hotTrueFalse" id="hotNo">없음
+                </div>
+              </div>
+            </div>
+            <div class="popupArticleBox">
+              <div class="popupArticleDouble">
+                <label for="vehicleName" class="popupArticleLabel">차량이름</label>
+                <input type="text" id="vehicleName" class="popupArticleInput" placeholder="00">
+              </div>
+              <div class="popupArticleDouble">
+                <label for="maintenanceCost" class="popupArticleLabel">정비(월)</label>
+                <input type="text" id="maintenanceCost" class="popupArticleInput" placeholder="25,000,000">
+              </div>
+              <div class="popupArticleDouble popupArticleTrueFalse">
+                <div class="popupArticleLabel">냉장고 유무</div>
+                <div class="trueFalse">
+                  <input type="radio" name="refrigeratorTrueFalse" id="refrigeratorYes">있음
+                  <input type="radio" name="refrigeratorTrueFalse" id="refrigeratorNo">없음
+                </div>
+              </div>
+            </div>
+            <div class="popupArticleBox">
+              <div class="popupArticleDouble">
+                <label for="manufacturer" class="popupArticleLabel">제조사</label>
+                <input type="text" id="manufacturer" class="popupArticleInput" placeholder="00">
+              </div>
+              <div class="popupArticleDouble">
+                <label for="tuningCost" class="popupArticleLabel">튜닝(일)</label>
+                <input type="text" id="tuningCost" class="popupArticleInput" placeholder="25,000,000">
+              </div>
+              <div class="popupArticleDouble popupArticleTrueFalse">
+                <div class="popupArticleLabel">USB</div>
+                <div class="trueFalse">
+                  <input type="radio" name="usbTrueFalse" id="usbYes">있음
+                  <input type="radio" name="usbTrueFalse" id="usbNo">없음
+                </div>
+              </div>
+            </div>
+            <div class="popupArticleBox">
+              <div class="popupArticleDouble">
+                <label for="vehicleType" class="popupArticleLabel">형식</label>
+                <input type="text" id="vehicleType" class="popupArticleInput" placeholder="00">
+              </div>
+              <div class="popupArticleDouble">
+                <label for="depreciationCost" class="popupArticleLabel">감가상각(월)</label>
+                <input type="text" id="depreciationCost" class="popupArticleInput" placeholder="25,000,000">
+              </div>
+              <div class="popupArticleDouble popupArticleTrueFalse">
+                <div class="popupArticleLabel">TV</div>
+                <div class="trueFalse">
+                  <input type="radio" name="tvTrueFalse" id="tvYes">있음
+                  <input type="radio" name="tvTrueFalse" id="tvNo">없음
+                </div>
+              </div>
+            </div>
+            <div class="popupArticleBox popupArticleBoxTwo">
+              <div class="popupArticleDouble">
+                <label for="modelYear" class="popupArticleLabel">모델연도</label>
+                <input type="text" id="modelYear" class="popupArticleInput" placeholder="00">
+              </div>
+              <div class="popupArticleDouble popupArticleDoubleSecond">
+                <label for="depreciationYear" class="popupArticleLabel">감가기준년도</label>
+                <input type="text" id="depreciationYear" class="popupArticleInput" placeholder="25,000,000">
+              </div>
+            </div>
+            <div class="popupArticleBox popupArticleBoxTwo">
+              <div class="popupArticleDouble">
+                <label for="vehicleId" class="popupArticleLabel">차대번호</label>
+                <input type="text" id="vehicleId" class="popupArticleInput" placeholder="00">
+              </div>
+              <div class="popupArticleDouble popupArticleDoubleSecond">
+                <label for="installmentCost" class="popupArticleLabel">할부</label>
+                <input type="text" id="installmentCost" class="popupArticleInput" placeholder="25,000,000">
+              </div>
+            </div>
+            <div class="popupArticleBox popupArticleBoxOne">
+              <div class="popupArticleDouble">
+                <label for="engineType" class="popupArticleLabel">원동기형식</label>
+                <input type="text" id="engineType" class="popupArticleInput" placeholder="00">
+              </div>
+            </div>
+            <div class="popupArticleBox popupArticleBoxOne">
+              <div class="popupArticleDouble">
+                <label for="driverName" class="popupArticleLabel">담당기사</label>
+                <input type="text" id="driverName" class="popupArticleInput" placeholder="00">
+              </div>
+            </div>
+            <div class="popupArticleBox popupArticleBoxOne">
+              <div class="popupArticleDouble">
+                <label for="inspectionDate" class="popupArticleLabel">정기점검일</label>
+                <input type="date" id="inspectionDate" class="popupArticleInput" placeholder="00">
+              </div>
+            </div>
+            <div class="popupArticleBox popupArticleBoxOne">
+              <div class="popupArticleDouble">
+                <label for="usageStatus" class="popupArticleLabel">사용방식</label>
+                <div class="trueFalse aloneTrueFalse">
+                  <div>
+                    <input type="radio" name="useTrueFalse" id="useYes">사용
+                  </div>
+                  <div>
+                    <input type="radio" name="useTrueFalse" id="useNo">미사용
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="popupArticleBox popupArticleBoxOne">
+              <div class="popupArticleDouble">
+                <label for="registrationCert" class="popupArticleLabel">차량등록증</label>
+                <input type="text" id="registrationCert" class="popupArticleInput">
+              </div>
             </div>
           </div>
-          <div class="nav1-box" style="background-color: rgb(28, 26, 78)">
-            <li class="nav1-box-menu nav1-box-menu-have-depth2">
-              <img
-                class="nav1-box-menu-img"
-                src="/static/images/dispatchSystem.png?v=0.1236"
-                alt="배차시스템 아이콘"
-              />
-              <div>배차관리</div>
-              <svg
-                class="side-menu-arrow"
-                xmlns="http://www.w3.org/2000/svg"
-                width="18.228"
-                height="11.84"
-                viewBox="0 0 18.228 11.84"
-              >
-                <path
-                  id="패스_256"
-                  data-name="패스 256"
-                  d="M0,0,6.753,8.223,14,0"
-                  transform="translate(2.111 2.117)"
-                  fill="none"
-                  stroke="#fff"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="3"
-                ></path>
-              </svg>
-            </li>
-            <div class="side-menu-nav2-box">
-              <ul class="side-menu-nav2">
-                <a href="/dispatch/order" class="side-menu-nav2-link">
-                  <li class="side-menu-nav2-menu">일반배차</li>
-                </a>
-                <a href="/dispatch/regularly" class="side-menu-nav2-link">
-                  <li class="side-menu-nav2-menu">출/퇴근배차</li>
-                </a>
-                <a href="/dispatch/regularly/route" class="side-menu-nav2-link">
-                  <li class="side-menu-nav2-menu">출/퇴근 노선관리</li>
-                </a>
-                <a
-                  href="/dispatch/regularly/route/know"
-                  class="side-menu-nav2-link"
-                >
-                  <li class="side-menu-nav2-menu">출/퇴근 노선숙지</li>
-                </a>
-                <a href="/dispatch/schedule" class="side-menu-nav2-link">
-                  <li class="side-menu-nav2-menu">운행/배차확인</li>
-                </a>
-                <a href="/dispatch/refusal" class="side-menu-nav2-link">
-                  <li class="side-menu-nav2-menu">배차거부관리</li>
-                </a>
-                <a href="/dispatch/driving" class="side-menu-nav2-link">
-                  <li class="side-menu-nav2-menu">운행일보</li>
-                </a>
-                <a href="/dispatch/regularly/connect" class="side-menu-nav2-link">
-                  <li class="side-menu-nav2-menu">출/퇴근 배차표</li>
-                </a>
-              </ul>
-            </div>
-          </div>
-          <div class="nav1-box" style="background-color: rgb(28, 26, 78)">
-            <li class="nav1-box-menu nav1-box-menu-have-depth2">
-              <svg
-                class="nav1-box-menu-img"
-                xmlns="http://www.w3.org/2000/svg"
-                width="15"
-                height="15"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                <line x1="16" y1="2" x2="16" y2="6"></line>
-                <line x1="8" y1="2" x2="8" y2="6"></line>
-                <line x1="3" y1="10" x2="21" y2="10"></line>
-              </svg>
-              <div>업무관리</div>
-              <svg
-                class="side-menu-arrow"
-                xmlns="http://www.w3.org/2000/svg"
-                width="18.228"
-                height="11.84"
-                viewBox="0 0 18.228 11.84"
-              >
-                <path
-                  id="패스_256"
-                  data-name="패스 256"
-                  d="M0,0,6.753,8.223,14,0"
-                  transform="translate(2.111 2.117)"
-                  fill="none"
-                  stroke="#fff"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="3"
-                ></path>
-              </svg>
-            </li>
-            <div class="side-menu-nav2-box">
-              <ul class="side-menu-nav2">
-                <a href="/assignment/temporary" class="side-menu-nav2-link">
-                  <li class="side-menu-nav2-menu">일반업무관리</li>
-                </a>
-                <a href="/assignment/" class="side-menu-nav2-link">
-                  <li class="side-menu-nav2-menu">고정업무배정</li>
-                </a>
-                <a href="/assignment/data" class="side-menu-nav2-link">
-                  <li class="side-menu-nav2-menu">고정업무관리</li>
-                </a>
-              </ul>
-            </div>
-          </div>
-          <div class="nav1-box" style="background-color: rgb(28, 26, 78)">
-            <li class="nav1-box-menu nav1-box-menu-have-depth2">
-              <img
-                class="nav1-box-menu-img"
-                src="/static/images/HRManagement.png?v=0.1236"
-                alt="인사관리 아이콘"
-              />
-              <div>인사관리</div>
-              <svg
-                class="side-menu-arrow"
-                xmlns="http://www.w3.org/2000/svg"
-                width="18.228"
-                height="11.84"
-                viewBox="0 0 18.228 11.84"
-              >
-                <path
-                  id="패스_256"
-                  data-name="패스 256"
-                  d="M0,0,6.753,8.223,14,0"
-                  transform="translate(2.111 2.117)"
-                  fill="none"
-                  stroke="#fff"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="3"
-                ></path>
-              </svg>
-            </li>
-            <div class="side-menu-nav2-box">
-              <ul class="side-menu-nav2">
-                <a href="/HR/member" class="side-menu-nav2-link">
-                  <li class="side-menu-nav2-menu">직원관리</li>
-                </a>
-                <a href="/HR/salary" class="side-menu-nav2-link">
-                  <li class="side-menu-nav2-menu">급여관리(현재)</li>
-                </a>
-                <a href="/HR/salary/change" class="side-menu-nav2-link">
-                  <li class="side-menu-nav2-menu">급여관리(변경)</li>
-                </a>
-                <a href="/HR/salary/outsourcing" class="side-menu-nav2-link">
-                  <li class="side-menu-nav2-menu">급여관리(용역)</li>
-                </a>
-                <a href="/HR/salary/manager" class="side-menu-nav2-link">
-                  <li class="side-menu-nav2-menu">급여관리(관리자)</li>
-                </a>
-                <a href="/HR/team" class="side-menu-nav2-link">
-                  <li class="side-menu-nav2-menu">팀관리</li>
-                </a>
-              </ul>
-            </div>
-          </div>
-          <div class="nav1-box">
-            <li class="nav1-box-menu nav1-box-menu-have-depth2">
-              <img
-                class="nav1-box-menu-img"
-                src="/static/images/accountingSystem.png?v=0.1236"
-                alt="경리시스템 아이콘"
-              />
-              <div>매출관리</div>
-              <svg
-                class="side-menu-arrow"
-                xmlns="http://www.w3.org/2000/svg"
-                width="18.228"
-                height="11.84"
-                viewBox="0 0 18.228 11.84"
-              >
-                <path
-                  id="패스_256"
-                  data-name="패스 256"
-                  d="M0,0,6.753,8.223,14,0"
-                  transform="translate(2.111 2.117)"
-                  fill="none"
-                  stroke="#fff"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="3"
-                ></path>
-              </svg>
-            </li>
-            <div class="side-menu-nav2-box">
-              <ul class="side-menu-nav2">
-                <a href="/accounting/sales" class="side-menu-nav2-link">
-                  <li class="side-menu-nav2-menu">매출현황</li>
-                </a>
-                <a href="/accounting/deposit" class="side-menu-nav2-link">
-                  <li class="side-menu-nav2-menu">입금관리</li>
-                </a>
-                <a href="/accounting/collect" class="side-menu-nav2-link">
-                  <li class="side-menu-nav2-menu">일반 수금관리</li>
-                </a>
-                <a
-                  href="/accounting/regularly/collect"
-                  class="side-menu-nav2-link"
-                >
-                  <li class="side-menu-nav2-menu">출/퇴근 수금관리</li>
-                </a>
-              </ul>
-            </div>
-          </div>
-          <div class="nav1-box">
-            <li class="nav1-box-menu nav1-box-menu-have-depth2">
-              <img
-                class="nav1-box-menu-img"
-                src="/static/images/vehicleManagement.png?v=0.1236"
-                alt="차량관리 아이콘"
-              />
-              <div>차량관리</div>
-              <svg
-                class="side-menu-arrow"
-                xmlns="http://www.w3.org/2000/svg"
-                width="18.228"
-                height="11.84"
-                viewBox="0 0 18.228 11.84"
-              >
-                <path
-                  id="패스_256"
-                  data-name="패스 256"
-                  d="M0,0,6.753,8.223,14,0"
-                  transform="translate(2.111 2.117)"
-                  fill="none"
-                  stroke="#fff"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="3"
-                ></path>
-              </svg>
-            </li>
-            <div class="side-menu-nav2-box">
-              <ul class="side-menu-nav2">
-                <a href="/vehicle/list" class="side-menu-nav2-link">
-                  <li class="side-menu-nav2-menu">차량관리</li>
-                </a>
-                <a href="/vehicle/refueling" class="side-menu-nav2-link">
-                  <li class="side-menu-nav2-menu">주유관리</li>
-                </a>
-                <a href="/vehicle/dailychecklist" class="side-menu-nav2-link">
-                  <li class="side-menu-nav2-menu">일일점검</li>
-                </a>
-                <a href="/vehicle/weeklychecklist" class="side-menu-nav2-link">
-                  <li class="side-menu-nav2-menu">주간점검</li>
-                </a>
-                <a href="/vehicle/equipmentchecklist" class="side-menu-nav2-link">
-                  <li class="side-menu-nav2-menu">비품점검</li>
-                </a>
-              </ul>
-            </div>
-          </div>
-          <div class="nav1-box">
-            <li class="nav1-box-menu nav1-box-menu-have-depth2">
-              <img
-                class="nav1-box-menu-img"
-                src="/static/images/document.png?v=0.1236"
-                alt="공지사항 아이콘"
-              />
-              <div>서류관리</div>
-              <svg
-                class="side-menu-arrow"
-                xmlns="http://www.w3.org/2000/svg"
-                width="18.228"
-                height="11.84"
-                viewBox="0 0 18.228 11.84"
-              >
-                <path
-                  id="패스_256"
-                  data-name="패스 256"
-                  d="M0,0,6.753,8.223,14,0"
-                  transform="translate(2.111 2.117)"
-                  fill="none"
-                  stroke="#fff"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="3"
-                ></path>
-              </svg>
-            </li>
-            <div class="side-menu-nav2-box">
-              <ul class="side-menu-nav2">
-                <a href="/document/company" class="side-menu-nav2-link">
-                  <li class="side-menu-nav2-menu">회사서류</li>
-                </a>
-                <a href="/document/dispatch" class="side-menu-nav2-link">
-                  <li class="side-menu-nav2-menu">운행서류</li>
-                </a>
-              </ul>
-            </div>
-          </div>
-          <div class="nav1-box">
-            <li class="nav1-box-menu nav1-box-menu-have-depth2">
-              <img
-                class="nav1-box-menu-img"
-                src="/static/images/document.png?v=0.1236"
-                alt="공지사항 아이콘"
-              />
-              <div>민원관리</div>
-              <svg
-                class="side-menu-arrow"
-                xmlns="http://www.w3.org/2000/svg"
-                width="18.228"
-                height="11.84"
-                viewBox="0 0 18.228 11.84"
-              >
-                <path
-                  id="패스_256"
-                  data-name="패스 256"
-                  d="M0,0,6.753,8.223,14,0"
-                  transform="translate(2.111 2.117)"
-                  fill="none"
-                  stroke="#fff"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="3"
-                ></path>
-              </svg>
-            </li>
-            <div class="side-menu-nav2-box">
-              <ul class="side-menu-nav2">
-                <a href="/complaint/consulting" class="side-menu-nav2-link">
-                  <li class="side-menu-nav2-menu">상담신청관리</li>
-                </a>
-                <a href="/complaint/inspection" class="side-menu-nav2-link">
-                  <li class="side-menu-nav2-menu">차량정비신청관리</li>
-                </a>
-              </ul>
-            </div>
-          </div>
-          <div class="nav1-box">
-            <li class="nav1-box-menu">
-              <img
-                class="nav1-box-menu-img"
-                src="/static/images/calendar.png?v=0.1236"
-                alt="일정 아이콘"
-              />
-              <a href="/member/setting/client" class="non-depth2-menu"
-                >거래처 관리</a
-              >
-            </li>
-          </div>
-          <div class="nav1-box">
-            <li class="nav1-box-menu">
-              <img
-                class="nav1-box-menu-img"
-                src="/static/images/calendar.png?v=0.1236"
-                alt="일정 아이콘"
-              />
-              <a href="/member/setting" class="non-depth2-menu">항목 관리</a>
-            </li>
-          </div>
-        </ul>
-      </div>
-      <!-- 메뉴얼 -->
-      <div class="manual-area">
-        <a href="../templates/test.pdf" download="trpManual.pdf">
-          <div>메뉴얼</div>
-        </a>
-        <a href="http://kingbuserp.link/">
-          <div>FAQ</div>
-        </a>
-      </div>
-    </div> 
-    <!--사이드메뉴 종료-->
-    
-    <!--메인컨테이너-->
-    <div class="main-container">
-      
-
-      <!--헤더-->  
-      <div class="header">
-        <!-- 페이지별 제목 변경 -->
-        <div class="header-title">
-          Vehicle
-        </div>
-        <!--trp 헤더 프로필-->
-        <div class="profile">
-          <span class="user-name">관리자</span>
-          <div>
-            <span>님</span>
-            <img
-              src="/static/images/profileArrow.png?v=0.1236"
-              alt="아래 화살표 아이콘"
-            />
+          <div class="closeCreate">
+            <button class="close" onclick="closePopup()">닫기</button>
+            <button class="create">등록</button>
           </div>
         </div>
-        
-        <div class="profile-box" style="display: none">
-          <div class="profile-menu-cell">
-            <img
-              src="/static/images/createUserIcon.png?v=0.1236"
-              alt="설정 아이콘"
-            />
-            <span class="profile-menu-name">아이디 변경</span>
+      </div>
+      <div class="sideMenu">
+        <div class="logoBox">
+          <a href="/service" style="color: white; font-size: 5rem">DEV</a>
+        </div>
+        <div class="sideMenuNav">
+          <ul class="sideMenuNav1">
+            <div class="nav1Box" style="background-color: rgb(28, 26, 78)">
+              <li class="nav1BoxMenu">
+                <img class="nav1BoxMenuImg" src="/static/images/calendar.png?v=0.1236" alt="일정 아이콘"/>
+                <a href="/service" class="nonDepth2Menu">일정</a>
+              </li>
+            </div>
+            <div class="nav1Box" style="background-color: rgb(28, 26, 78)">
+              <li class="nav1BoxMenu nav1BoxMenuHaveDepth2">
+                <img class="nav1BoxMenuImg" src="/static/images/notice.png?v=0.1236" alt="공지사항 아이콘"/>
+                <div>공지사항</div>
+                <svg class="sideMenuArrow" xmlns="http://www.w3.org/2000/svg" width="18.228" height="11.84" viewBox="0 0 18.228 11.84">
+                  <path id="패스_256" data-name="패스 256" d="M0,0,6.753,8.223,14,0" transform="translate(2.111 2.117)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                </svg>
+              </li>
+              <div class="sideMenuNav2Box">
+                <ul class="sideMenuNav2">
+                  <a href="/notice/driver" class="sideMenuNav2Link">
+                    <li class="sideMenuNav2Menu">기사님 공지사항</li>
+                  </a>
+                  <a href="/notice/office" class="sideMenuNav2Link">
+                    <li class="sideMenuNav2Menu">사무실 공지사항</li>
+                  </a>
+                </ul>
+              </div>
+            </div>
+            <div class="nav1Box" style="background-color: rgb(28, 26, 78)">
+              <li class="nav1BoxMenu nav1BoxMenuHaveDepth2">
+                <img class="nav1BoxMenuImg" src="/static/images/dispatchSystem.png?v=0.1236" alt="배차시스템 아이콘"/>
+                <div>배차관리</div>
+                <svg class="sideMenuArrow" xmlns="http://www.w3.org/2000/svg" width="18.228" height="11.84" viewBox="0 0 18.228 11.84">
+                  <path id="패스_256" data-name="패스 256" d="M0,0,6.753,8.223,14,0" transform="translate(2.111 2.117)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                </svg>
+              </li>
+              <div class="sideMenuNav2Box">
+                <ul class="sideMenuNav2">
+                  <a href="/dispatch/order" class="sideMenuNav2Link">
+                    <li class="sideMenuNav2Menu">일반배차</li>
+                  </a>
+                  <a href="/dispatch/regularly" class="sideMenuNav2Link">
+                    <li class="sideMenuNav2Menu">출/퇴근배차</li>
+                  </a>
+                  <a href="/dispatch/regularly/route" class="sideMenuNav2Link">
+                    <li class="sideMenuNav2Menu">출/퇴근 노선관리</li>
+                  </a>
+                  <a href="/dispatch/regularly/route/know" class="sideMenuNav2Link">
+                    <li class="sideMenuNav2Menu">출/퇴근 노선숙지</li>
+                  </a>
+                  <a href="/dispatch/schedule" class="sideMenuNav2Link">
+                    <li class="sideMenuNav2Menu">운행/배차확인</li>
+                  </a>
+                  <a href="/dispatch/refusal" class="sideMenuNav2Link">
+                    <li class="sideMenuNav2Menu">배차거부관리</li>
+                  </a>
+                  <a href="/dispatch/driving" class="sideMenuNav2Link">
+                    <li class="sideMenuNav2Menu">운행일보</li>
+                  </a>
+                  <a href="/dispatch/regularly/connect" class="sideMenuNav2Link">
+                    <li class="sideMenuNav2Menu">출/퇴근 배차표</li>
+                  </a>
+                </ul>
+              </div>
+            </div>
+            <div class="nav1Box" style="background-color: rgb(28, 26, 78)">
+              <li class="nav1BoxMenu nav1BoxMenuHaveDepth2">
+                <svg class="nav1BoxMenuImg" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <div>업무관리</div>
+                <svg class="sideMenuArrow" xmlns="http://www.w3.org/2000/svg" width="18.228" height="11.84" viewBox="0 0 18.228 11.84">
+                  <path id="패스_256" data-name="패스 256" d="M0,0,6.753,8.223,14,0" transform="translate(2.111 2.117)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                </svg>
+              </li>
+              <div class="sideMenuNav2Box">
+                <ul class="sideMenuNav2">
+                  <a href="/assignment/temporary" class="sideMenuNav2Link">
+                    <li class="sideMenuNav2Menu">일반업무관리</li>
+                  </a>
+                  <a href="/assignment/" class="sideMenuNav2Link">
+                    <li class="sideMenuNav2Menu">고정업무배정</li>
+                  </a>
+                  <a href="/assignment/data" class="sideMenuNav2Link">
+                    <li class="sideMenuNav2Menu">고정업무관리</li>
+                  </a>
+                </ul>
+              </div>
+            </div>
+            <div class="nav1Box" style="background-color: rgb(28, 26, 78)">
+              <li class="nav1BoxMenu nav1BoxMenuHaveDepth2">
+                <img class="nav1BoxMenuImg" src="/static/images/HRManagement.png?v=0.1236" alt="인사관리 아이콘"/>
+                <div>인사관리</div>
+                <svg class="sideMenuArrow" xmlns="http://www.w3.org/2000/svg" width="18.228" height="11.84" viewBox="0 0 18.228 11.84">
+                  <path id="패스_256" data-name="패스 256" d="M0,0,6.753,8.223,14,0" transform="translate(2.111 2.117)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                </svg>
+              </li>
+              <div class="sideMenuNav2Box">
+                <ul class="sideMenuNav2">
+                  <a href="/HR/member" class="sideMenuNav2Link">
+                    <li class="sideMenuNav2Menu">직원관리</li>
+                  </a>
+                  <a href="/HR/salary" class="sideMenuNav2Link">
+                    <li class="sideMenuNav2Menu">급여관리(현재)</li>
+                  </a>
+                  <a href="/HR/salary/change" class="sideMenuNav2Link">
+                    <li class="sideMenuNav2Menu">급여관리(변경)</li>
+                  </a>
+                  <a href="/HR/salary/outsourcing" class="sideMenuNav2Link">
+                    <li class="sideMenuNav2Menu">급여관리(용역)</li>
+                  </a>
+                  <a href="/HR/salary/manager" class="sideMenuNav2Link">
+                    <li class="sideMenuNav2Menu">급여관리(관리자)</li>
+                  </a>
+                  <a href="/HR/team" class="sideMenuNav2Link">
+                    <li class="sideMenuNav2Menu">팀관리</li>
+                  </a>
+                </ul>
+              </div>
+            </div>
+            <div class="nav1Box">
+              <li class="nav1BoxMenu nav1BoxMenuHaveDepth2">
+                <img class="nav1BoxMenuImg" src="/static/images/accountingSystem.png?v=0.1236" alt="경리시스템 아이콘"/>
+                <div>매출관리</div>
+                <svg class="sideMenuArrow" xmlns="http://www.w3.org/2000/svg" width="18.228" height="11.84" viewBox="0 0 18.228 11.84">
+                  <path id="패스_256" data-name="패스 256" d="M0,0,6.753,8.223,14,0" transform="translate(2.111 2.117)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                </svg>
+              </li>
+              <div class="sideMenuNav2Box">
+                <ul class="sideMenuNav2">
+                  <a href="/accounting/sales" class="sideMenuNav2Link">
+                    <li class="sideMenuNav2Menu">매출현황</li>
+                  </a>
+                  <a href="/accounting/deposit" class="sideMenuNav2Link">
+                    <li class="sideMenuNav2Menu">입금관리</li>
+                  </a>
+                  <a href="/accounting/collect" class="sideMenuNav2Link">
+                    <li class="sideMenuNav2Menu">일반 수금관리</li>
+                  </a>
+                  <a href="/accounting/regularly/collect" class="sideMenuNav2Link">
+                    <li class="sideMenuNav2Menu">출/퇴근 수금관리</li>
+                  </a>
+                </ul>
+              </div>
+            </div>
+            <div class="nav1Box">
+              <li class="nav1BoxMenu nav1BoxMenuHaveDepth2">
+                <img class="nav1BoxMenuImg" src="/static/images/vehicleManagement.png?v=0.1236" alt="차량관리 아이콘"/>
+                <div>차량관리</div>
+                <svg class="sideMenuArrow" xmlns="http://www.w3.org/2000/svg" width="18.228" height="11.84" viewBox="0 0 18.228 11.84">
+                  <path id="패스_256" data-name="패스 256" d="M0,0,6.753,8.223,14,0" transform="translate(2.111 2.117)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                </svg>
+              </li>
+              <div class="sideMenuNav2Box">
+                <ul class="sideMenuNav2">
+                  <a href="/vehicle/list" class="sideMenuNav2Link">
+                    <li class="sideMenuNav2Menu">차량관리</li>
+                  </a>
+                  <a href="/vehicle/refueling" class="sideMenuNav2Link">
+                    <li class="sideMenuNav2Menu">주유관리</li>
+                  </a>
+                  <a href="/vehicle/dailyChecklist" class="sideMenuNav2Link">
+                    <li class="sideMenuNav2Menu">일일점검</li>
+                  </a>
+                  <a href="/vehicle/weeklyChecklist" class="sideMenuNav2Link">
+                    <li class="sideMenuNav2Menu">주간점검</li>
+                  </a>
+                  <a href="/vehicle/equipmentChecklist" class="sideMenuNav2Link">
+                    <li class="sideMenuNav2Menu">비품점검</li>
+                  </a>
+                </ul>
+              </div>
+            </div>
+            <div class="nav1Box">
+              <li class="nav1BoxMenu nav1BoxMenuHaveDepth2">
+                <img class="nav1BoxMenuImg" src="/static/images/document.png?v=0.1236" alt="공지사항 아이콘"/>
+                <div>서류관리</div>
+                <svg class="sideMenuArrow" xmlns="http://www.w3.org/2000/svg" width="18.228" height="11.84" viewBox="0 0 18.228 11.84">
+                  <path id="패스_256" data-name="패스 256" d="M0,0,6.753,8.223,14,0" transform="translate(2.111 2.117)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                </svg>
+              </li>
+              <div class="sideMenuNav2Box">
+                <ul class="sideMenuNav2">
+                  <a href="/document/company" class="sideMenuNav2Link">
+                    <li class="sideMenuNav2Menu">회사서류</li>
+                  </a>
+                  <a href="/document/dispatch" class="sideMenuNav2Link">
+                    <li class="sideMenuNav2Menu">운행서류</li>
+                  </a>
+                </ul>
+              </div>
+            </div>
+            <div class="nav1Box">
+              <li class="nav1BoxMenu nav1BoxMenuHaveDepth2">
+                <img class="nav1BoxMenuImg" src="/static/images/document.png?v=0.1236" alt="공지사항 아이콘"/>
+                <div>민원관리</div>
+                <svg class="sideMenuArrow" xmlns="http://www.w3.org/2000/svg" width="18.228" height="11.84" viewBox="0 0 18.228 11.84">
+                  <path id="패스_256" data-name="패스 256" d="M0,0,6.753,8.223,14,0" transform="translate(2.111 2.117)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+                </svg>
+              </li>
+              <div class="sideMenuNav2Box">
+                <ul class="sideMenuNav2">
+                  <a href="/complaint/consulting" class="sideMenuNav2Link">
+                    <li class="sideMenuNav2Menu">상담신청관리</li>
+                  </a>
+                  <a href="/complaint/inspection" class="sideMenuNav2Link">
+                    <li class="sideMenuNav2Menu">차량정비신청관리</li>
+                  </a>
+                </ul>
+              </div>
+            </div>
+            <div class="nav1Box">
+              <li class="nav1BoxMenu">
+                <img class="nav1BoxMenuImg" src="/static/images/calendar.png?v=0.1236" alt="일정 아이콘"/>
+                <a href="/member/setting/client" class="nonDepth2Menu">거래처 관리</a>
+              </li>
+            </div>
+            <div class="nav1Box">
+              <li class="nav1BoxMenu">
+                <img class="nav1BoxMenuImg" src="/static/images/calendar.png?v=0.1236" alt="일정 아이콘"/>
+                <a href="/member/setting" class="nonDepth2Menu">항목 관리</a>
+              </li>
+            </div>
+          </ul>
+        </div>
+        <div class="manualArea">
+          <a href="../templates/test.pdf" download="trpManual.pdf">
+            <div>메뉴얼</div>
+          </a>
+          <a href="http://kingbuserp.link/">
+            <div>FAQ</div>
+          </a>
+        </div>
+      </div> 
+      <div class="mainContainer">
+        <div class="header">
+          <div class="headerTitle">
+            차량관리
           </div>
-          <div class="profile-menu-cell">
-            <img
-              src="/static/images/passwordIcon.png?v=0.1236"
-              alt="비밀번호 변경"
-            />
-            <span class="profile-menu-name">비밀번호 변경</span>
+          <div class="profile">
+            <span class="userName">관리자</span>
+            <div>
+              <span>님</span>
+              <img src="/static/images/profileArrow.png?v=0.1236" alt="아래 화살표 아이콘"/>
+            </div>
           </div>
-          <div class="profile-menu-cell">
-            <a href="/member/logout">
-              <img
-                src="/static/images/logoutIcon.png?v=0.1236"
-                alt="로그아웃"
-              />
-              <span class="profile-menu-name">로그아웃</span>
-            </a>
+          <div class="profileBox" style="display: none">
+            <div class="profileMenuCell">
+              <img src="/static/images/createUserIcon.png?v=0.1236" alt="설정 아이콘"/>
+              <span class="profileMenuName">아이디 변경</span>
+            </div>
+            <div class="profileMenuCell">
+              <img src="/static/images/passwordIcon.png?v=0.1236" alt="비밀번호 변경"/>
+              <span class="profileMenuName">비밀번호 변경</span>
+            </div>
+            <div class="profileMenuCell">
+              <a href="/member/logout">
+                <img src="/static/images/logoutIcon.png?v=0.1236" alt="로그아웃"/>
+                <span class="profileMenuName">로그아웃</span>
+              </a>
+            </div>
           </div>
         </div>
-        <!--trp 헤더 제목-->
-      
-      </div>
-      <!--헤더 종료-->
-      
-      <!--메인컨텐츠-->
-      <div class="main-contents">
-      <!--그래프 컨테이너-->
-      <div class="graph-container">
-        <button class="graph-move-button" type="button">
-          <span class="graph-move-arrow"></span>
-        </button>
-      </div>
-      <!--그래프 컨테이너 종료-->
-          <!--메인 컨텐츠 컨테이너-->
-          <div class="main-contents-container">
-          
-          <!--검색 컨테이너--> 
-          <div class="search-container">
-            <form class="search-form">
-                <input class="search-vehicle-num" type="textarea" placeholder="차량번호를 입력하세요.">
-                <input autocomplete="off" name='date' value="2024-05-01" type="date" class="search-form-input search-form-input-date">
-                <button>오늘</button>
-                <button></button>
-                <button></button>              
-                <input type="submit" class="search-form-search-btn" value="검색">
-            </form>
+        <div class="mainContents">
+          <div class="graphContainer">
+            <button class="graphMoveButton" type="button">
+              <span class="graphMoveArrow">></span>
+            </button>
           </div>
-          <!--검색 컨테이너 종료-->
-          
-          <!--필터 컨테이너-->
-          <div class="filter-container">
-            <button class="filter-order">오래된 차량 순</button>
-            <button class="filter-order filter-new">최신 차량 순</button>
-            <div class="delete-create">
-          </div>
-          </div>
-          <!--필터 컨테이너 종료-->
-
-          <!--테이블 컨테이너-->
-          <div class="table-container">  
-            <table class="table-list">
+          <div class="mainContentsContainer">
+            <div class="searchContainer">
+              <form class="searchForm">
+                <input class="searchVehicleNum" type="textarea" placeholder="차량번호를 입력하세요.">
+                <input autocomplete="off" name='date' value="2024-05-01" type="date" class="searchFormInput searchFormInputDate">
+                <button class="today">오늘</button>
+                <button class="yesterdayTomorrow"><</button>
+                <button class="yesterdayTomorrow">></button>              
+                <input type="submit" class="searchFormSearchBtn" value="검색">
+              </form>
+            </div>
+            <div class="filterContainer">
+              <button class="filterOrder">오래된 차량 순</button>
+              <button class="filterOrder filterNew">최신 차량 순</button>
+              <div class="deleteCreate"></div>
+            </div>
+            <div class="tableContainer">  
+              <table class="tableList">
                 <thead>
-                    <tr class="table-list-super-head-tr">
-                        <th><input type="checkbox" class="amount-check-all"></th>
-                        <th>순번</th>
-                        <th>차량번호</th>
-                        <th>승차인원</th>
-                        <th>출고일자(연도)</th>
-                        <th>전광판</th>
-                        <th>노래방</th>
-                        <th>온수기</th>
-                        <th>냉장고</th>
-                        <th>USB</th>
-                        <th>TV</th>
-                        <th>상세정보</th>
-                        <th>차량서류</th>
-                    </tr>
+                  <tr class="tableListSuperHeadTr">
+                    <th><input type="checkbox" class="amountCheckAll"></th>
+                    <th>순번</th>
+                    <th>차량번호</th>
+                    <th>승차인원</th>
+                    <th>출고일자(연도)</th>
+                    <th>전광판</th>
+                    <th>노래방</th>
+                    <th>온수기</th>
+                    <th>냉장고</th>
+                    <th>USB</th>
+                    <th>TV</th>
+                    <th>상세정보</th>
+                    <th>차량서류</th>
+                  </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                      <td><input type="checkbox"></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                    </tr>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
                 </tbody>
-            </table>
+              </table>
+            </div>
           </div>
-          <!--테이블 컨테이너 종료-->
-
-          </div>
-          <!--메인 컨텐츠 컨테이너 종료-->
-
-          <!--CRUD-->
-          <div class="create-delete">
+          <div class="createDelete">
             <button class="delete">삭제</button>
-            <button class="create" onclick="openPopup()">차량 등록</button>
+            <button class="create vehicleCreate" onclick="openPopup()">차량 등록</button>
           </div>
-          <!--CRUD 종료-->
-
+        </div>
       </div>
-      <!--메인컨텐츠 종료-->
     </div>
-    <!--메인컨테이너 종료-->
-    
-  
-  
-    </div>
-    <!--js-->
-    <script src="js/popup.js"></script>
-    <script src="js/global.js"></script>
+    <script src="{% static js/popup.js %}"></script>
+    <script src="{% static js/global.js %}"></script>
+    <script src="{% static js/sidebar.js %}"></script>
   </body>
 </html>

@@ -1,7 +1,8 @@
 from django.db import models
 
 class Vehicle(models.Model):
-    license_number = models.CharField(max_length=20)  # 차량 번호
+    license_number_0 = models.CharField(max_length=20) # 차량 앞번호
+    license_number_1 = models.CharField(max_length=20) # 차량 뒷번호
     price = models.BigIntegerField()  # 차량 가격
     capacity = models.IntegerField()  # 승차 인원
     license_plate_price = models.BigIntegerField()  # 번호판 가격
