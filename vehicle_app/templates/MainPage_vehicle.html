@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,7 +10,8 @@
     <link rel="stylesheet" href="{% static 'css/mainContainer.css' %}">
     <link rel="stylesheet" href="{% static 'css/search.css' %}">
     <link rel="stylesheet" href="{% static 'css/sidemenu.css' %}">
-    <link rel="stylesheet" href= "{% static 'css/MainPage_Vehicle.css' %}">
+    <link rel="stylesheet" href="{% static 'css/MainPage_Vehicle.css' %}">
+
     
     <title>DEV</title>
   </head>
@@ -167,6 +169,7 @@
                 <input type="date" id="inspectionDate" class="popupArticleInput" placeholder="00">
               </div>
             </div>
+
             <div class="popupArticleBox popupArticleBoxOne">
               <div class="popupArticleDouble">
                 <label for="usageStatus" class="popupArticleLabel">사용방식</label>
@@ -193,6 +196,7 @@
           </div>
         </div>
       </div>
+      
       <div class="sideMenu">
         <div class="logoBox">
           <a href="/service" style="color: white; font-size: 5rem">DEV</a>
@@ -201,13 +205,13 @@
           <ul class="sideMenuNav1">
             <div class="nav1Box" style="background-color: rgb(28, 26, 78)">
               <li class="nav1BoxMenu">
-                <img class="nav1BoxMenuImg" src="/static/images/calendar.png?v=0.1236" alt="일정 아이콘"/>
+                <img class="nav1BoxMenuImg" src="{% static 'images/calendar.png' %}" alt="일정 아이콘"/>
                 <a href="/service" class="nonDepth2Menu">일정</a>
               </li>
             </div>
             <div class="nav1Box" style="background-color: rgb(28, 26, 78)">
               <li class="nav1BoxMenu nav1BoxMenuHaveDepth2">
-                <img class="nav1BoxMenuImg" src="/static/images/notice.png?v=0.1236" alt="공지사항 아이콘"/>
+                <img class="nav1BoxMenuImg" src="{% static 'images/notice.png' %}" alt="공지사항 아이콘"/>
                 <div>공지사항</div>
                 <svg class="sideMenuArrow" xmlns="http://www.w3.org/2000/svg" width="18.228" height="11.84" viewBox="0 0 18.228 11.84">
                   <path id="패스_256" data-name="패스 256" d="M0,0,6.753,8.223,14,0" transform="translate(2.111 2.117)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
@@ -226,7 +230,7 @@
             </div>
             <div class="nav1Box" style="background-color: rgb(28, 26, 78)">
               <li class="nav1BoxMenu nav1BoxMenuHaveDepth2">
-                <img class="nav1BoxMenuImg" src="/static/images/dispatchSystem.png?v=0.1236" alt="배차시스템 아이콘"/>
+                <img class="nav1BoxMenuImg" src="{% static 'images/dispatchSystem.png' %}" alt="배차시스템 아이콘"/>
                 <div>배차관리</div>
                 <svg class="sideMenuArrow" xmlns="http://www.w3.org/2000/svg" width="18.228" height="11.84" viewBox="0 0 18.228 11.84">
                   <path id="패스_256" data-name="패스 256" d="M0,0,6.753,8.223,14,0" transform="translate(2.111 2.117)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
@@ -290,7 +294,7 @@
             </div>
             <div class="nav1Box" style="background-color: rgb(28, 26, 78)">
               <li class="nav1BoxMenu nav1BoxMenuHaveDepth2">
-                <img class="nav1BoxMenuImg" src="/static/images/HRManagement.png?v=0.1236" alt="인사관리 아이콘"/>
+                <img class="nav1BoxMenuImg" src="{% static 'images/HRManagement.png' %}" alt="인사관리 아이콘"/>
                 <div>인사관리</div>
                 <svg class="sideMenuArrow" xmlns="http://www.w3.org/2000/svg" width="18.228" height="11.84" viewBox="0 0 18.228 11.84">
                   <path id="패스_256" data-name="패스 256" d="M0,0,6.753,8.223,14,0" transform="translate(2.111 2.117)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
@@ -315,13 +319,13 @@
                   </a>
                   <a href="/HR/team" class="sideMenuNav2Link">
                     <li class="sideMenuNav2Menu">팀관리</li>
-                  </a>
+                  </a>ㅌ
                 </ul>
               </div>
             </div>
             <div class="nav1Box">
               <li class="nav1BoxMenu nav1BoxMenuHaveDepth2">
-                <img class="nav1BoxMenuImg" src="/static/images/accountingSystem.png?v=0.1236" alt="경리시스템 아이콘"/>
+                <img class="nav1BoxMenuImg" src="{% static 'images/accountingSystem.png' %}" alt="경리시스템 아이콘"/>
                 <div>매출관리</div>
                 <svg class="sideMenuArrow" xmlns="http://www.w3.org/2000/svg" width="18.228" height="11.84" viewBox="0 0 18.228 11.84">
                   <path id="패스_256" data-name="패스 256" d="M0,0,6.753,8.223,14,0" transform="translate(2.111 2.117)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
@@ -346,7 +350,7 @@
             </div>
             <div class="nav1Box">
               <li class="nav1BoxMenu nav1BoxMenuHaveDepth2">
-                <img class="nav1BoxMenuImg" src="/static/images/vehicleManagement.png?v=0.1236" alt="차량관리 아이콘"/>
+                <img class="nav1BoxMenuImg" src="{% static 'images/vehicleManagement.png' %}" alt="차량관리 아이콘"/>
                 <div>차량관리</div>
                 <svg class="sideMenuArrow" xmlns="http://www.w3.org/2000/svg" width="18.228" height="11.84" viewBox="0 0 18.228 11.84">
                   <path id="패스_256" data-name="패스 256" d="M0,0,6.753,8.223,14,0" transform="translate(2.111 2.117)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
@@ -374,7 +378,7 @@
             </div>
             <div class="nav1Box">
               <li class="nav1BoxMenu nav1BoxMenuHaveDepth2">
-                <img class="nav1BoxMenuImg" src="/static/images/document.png?v=0.1236" alt="공지사항 아이콘"/>
+                <img class="nav1BoxMenuImg" src="{% static 'images/document.png' %}" alt="공지사항 아이콘"/>
                 <div>서류관리</div>
                 <svg class="sideMenuArrow" xmlns="http://www.w3.org/2000/svg" width="18.228" height="11.84" viewBox="0 0 18.228 11.84">
                   <path id="패스_256" data-name="패스 256" d="M0,0,6.753,8.223,14,0" transform="translate(2.111 2.117)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
@@ -393,7 +397,7 @@
             </div>
             <div class="nav1Box">
               <li class="nav1BoxMenu nav1BoxMenuHaveDepth2">
-                <img class="nav1BoxMenuImg" src="/static/images/document.png?v=0.1236" alt="공지사항 아이콘"/>
+                <img class="nav1BoxMenuImg" src="{% static 'images/document.png' %}" alt="공지사항 아이콘"/>
                 <div>민원관리</div>
                 <svg class="sideMenuArrow" xmlns="http://www.w3.org/2000/svg" width="18.228" height="11.84" viewBox="0 0 18.228 11.84">
                   <path id="패스_256" data-name="패스 256" d="M0,0,6.753,8.223,14,0" transform="translate(2.111 2.117)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
@@ -433,7 +437,9 @@
           </a>
         </div>
       </div> 
+      
       <div class="mainContainer">
+        
         <div class="header">
           <div class="headerTitle">
             차량관리
@@ -442,48 +448,55 @@
             <span class="userName">관리자</span>
             <div>
               <span>님</span>
-              <img src="/static/images/profileArrow.png?v=0.1236" alt="아래 화살표 아이콘"/>
+              <img src="{% static 'images/profileArrow.png' %}" alt="아래 화살표 아이콘"/>
             </div>
           </div>
           <div class="profileBox" style="display: none">
             <div class="profileMenuCell">
-              <img src="/static/images/createUserIcon.png?v=0.1236" alt="설정 아이콘"/>
+              <img src="{% static 'images/createUserIcon.png' %}" alt="설정 아이콘"/>
               <span class="profileMenuName">아이디 변경</span>
             </div>
             <div class="profileMenuCell">
-              <img src="/static/images/passwordIcon.png?v=0.1236" alt="비밀번호 변경"/>
+              <img src="{% static 'images/passwordIcon.png' %}" alt="비밀번호 변경"/>
               <span class="profileMenuName">비밀번호 변경</span>
             </div>
             <div class="profileMenuCell">
               <a href="/member/logout">
-                <img src="/static/images/logoutIcon.png?v=0.1236" alt="로그아웃"/>
+                <img src="{% static 'images/logoutIcon.png' %}" alt="로그아웃"/>
                 <span class="profileMenuName">로그아웃</span>
               </a>
             </div>
           </div>
+        
         </div>
+
         <div class="mainContents">
+          
           <div class="graphContainer">
             <button class="graphMoveButton" type="button">
-              <span class="graphMoveArrow">></span>
+              <span class="graphMoveArrow"></span>
             </button>
           </div>
+          
           <div class="mainContentsContainer">
+            
             <div class="searchContainer">
               <form class="searchForm">
                 <input class="searchVehicleNum" type="textarea" placeholder="차량번호를 입력하세요.">
                 <input autocomplete="off" name='date' value="2024-05-01" type="date" class="searchFormInput searchFormInputDate">
                 <button class="today">오늘</button>
-                <button class="yesterdayTomorrow"><</button>
-                <button class="yesterdayTomorrow">></button>              
+                <button class="yesterdayTomorrow"></button>
+                <button class="yesterdayTomorrow"></button>              
                 <input type="submit" class="searchFormSearchBtn" value="검색">
               </form>
             </div>
+            
             <div class="filterContainer">
               <button class="filterOrder">오래된 차량 순</button>
               <button class="filterOrder filterNew">최신 차량 순</button>
               <div class="deleteCreate"></div>
             </div>
+            
             <div class="tableContainer">  
               <table class="tableList">
                 <thead>
@@ -504,34 +517,45 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td><input type="checkbox"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
-                </tbody>
+                  {% for vehicle in vehicles %}
+                    <tr>
+                      <td><input type="checkbox"></td>
+                      <td>{{ forloop.counter }}</td> <!-- 순번 -->
+                      <td>{{ vehicle.license_number }}</td>
+                      <td>{{ vehicle.capacity }}</td>
+                      <td>{{ vehicle.release_date }}</td>
+                      <td>{{ vehicle.has_led_display|yesno:"있음,없음" }}</td>
+                      <td>{{ vehicle.has_karaoke|yesno:"있음,없음" }}</td>
+                      <td>{{ vehicle.has_water_heater|yesno:"있음,없음" }}</td>
+                      <td>{{ vehicle.has_refrigerator|yesno:"있음,없음" }}</td>
+                      <td>{{ vehicle.has_usb|yesno:"있음,없음" }}</td>
+                      <td>{{ vehicle.has_tv|yesno:"있음,없음" }}</td>
+                      <td><a href="{% url 'vehicle_detail' vehicle.id %}">상세정보</a></td>
+                      <td>
+                          {% if vehicle.registration_certificate %}
+                            <a href="{{ vehicle.registration_certificate.url }}">다운로드</a>
+                          {% else %}
+                              없음
+                          {% endif %}
+                      </td>
+                    </tr>
+                  {% endfor %}
               </table>
             </div>
+          
           </div>
+          
           <div class="createDelete">
             <button class="delete">삭제</button>
             <button class="create vehicleCreate" onclick="openPopup()">차량 등록</button>
           </div>
+        
         </div>
       </div>
     </div>
-    <script src="{% static js/popup.js %}"></script>
-    <script src="{% static js/global.js %}"></script>
-    <script src="{% static js/sidebar.js %}"></script>
+    <!-- js -->
+    <script src="{% static 'js/popup.js' %}"></script>
+    <script src="{% static 'js/global.js' %}"></script>
+    <script src="{% static 'js/sidebar.js' %}"></script>
   </body>
 </html>
