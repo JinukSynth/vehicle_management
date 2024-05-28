@@ -33,4 +33,4 @@ class Vehicle(models.Model):
 
     def __str__(self):
         return f"{self.license_number_0} - {self.license_number_1}"  # 객체를 문자열로 표현할 때 차량 번호와 이름 출력
-
+cd
