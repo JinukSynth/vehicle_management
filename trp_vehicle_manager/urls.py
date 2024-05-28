@@ -21,6 +21,7 @@ from vehicle_app import views
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('vehicles/',views.Vehicle_Management, name='MainPage_vehicle'),
+    path('vehicles/add/', views.vehicle_add, name='add_vehicle'),  # new vehicle
 ]
 
 
